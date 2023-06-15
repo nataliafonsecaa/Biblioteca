@@ -5,6 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sistema Biblioteca - LOGIN</title>
+    <style>
+   
+   body{
+    background-color: #B05160;
+    color:#FDFEF7;
+    font-family: "Open Sans", sans-serif;
+
+   }
+
+  </style>
 
 </head>
 <body>
@@ -17,10 +27,9 @@
             <input type = "text" id = "usuario" name = "usuario"  maxlength = "20"><br>
             <label for = "senha">Digite sua Senha: </label>
             <input type = "password" id = "senha" name = "senha"  maxlength = "20"><br>
-
             <input type="submit" value="Enviar" name="Enviar">
         </form>
-        
+
         <a href="./cadastro/usuario.php"><button>cadastrar</button></a><br>
 
         <?php
@@ -37,9 +46,9 @@
         
         }else{
 
-            $usu =  "SELECT usu_usuario, usu_id, usu_senha, usu_nome
+            $usu =  "SELECT usu_usuario, usu_id, usu_senha, usu_nome, usu_tipo
             FROM usuario 
-            WHERE ( usu_usuario = '$usuario' 0)
+            WHERE ( usu_usuario = '$usuario')
             ";
             $resultado = mysqli_query($con , $usu);
 
@@ -54,6 +63,7 @@
 
                 $usu_senha = $row["usu_senha"];
                 $usu_nome = $row["usu_nome"];
+                $usu_tipo = $row["usu_tipo"];
 
                 if ($senha == $usu_senha) {
           
@@ -63,7 +73,13 @@
                 
        
                     mysqli_close($con);   
-
+                    if($usu_tipo == 'funcionario'){
+                        header('location:./menu.php');
+                    }else{
+                        
+                    }
+                    
+                
                     
                 } else {
 
@@ -79,21 +95,3 @@
 </body>
 </html>
 
-<?php
-    session_start();
-    $id = $_SESSION["id"]; 
-    $nome = $_SESSION["nome"]; 
-    $tipo = $_SESSION["tipo"]; 
-    $status = $_SESSION["status"];
-    $usuario = $_SESSION["usuario"];
-    $senha = $_SESSION["senha"]; 
-    echo "id: " . $id .' nome: ' .$nome.' tipo: ' .$tipo.' status: ' .$status.' usuario: ' .$usuario.' senha: ' .$senha;
-    if (empty($id)) {
-        header('location:../index.php');
-    }else if ($tipo !== "usuario") {
-        session_unset();
-        session_destroy();
-        header('location:../../index.php');  
-        exit();
-    }
-?>

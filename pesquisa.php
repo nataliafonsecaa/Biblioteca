@@ -4,20 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro Livros</title>
+    <title>Document</title>
     <style>
    
    body{
-    background-color:  #DBC7A3;
+    background-color: #BF6415;
     color:#FDFEF7;
     font-family: "Open Sans", sans-serif;
+    padding: 0 20px;
    }
 
   </style>
 
-    </head>
+</head>
 <body>
-    <div>
+    <h1>Area de Pesquisa</h1>
+<div>
         <form method = 'POST'>
             <label for = "nome">Digite o nome do livro </label>
             <input type = "text" id = "nome" name = "nome"  maxlength = "80"><br>
@@ -32,6 +34,11 @@
             
 
             <input type="submit" value="Enviar" name= "Enviar">
+</form>
 
-        </form>
-        <a href="../menu.php"><button>Voltar</button></a>
+<a href="../menu.php"><button>Voltar</button></a>
+
+</div>
+</body>
+
+</html>

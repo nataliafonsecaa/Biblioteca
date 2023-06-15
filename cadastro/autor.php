@@ -5,6 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro Livros</title>
+    <style>
+   
+   body{
+    background-color: #95A691;
+    color:#FDFEF7;
+    font-family: "Open Sans", sans-serif;
+   }
+
+  </style>
     </head>
 <body>
     <div>
@@ -19,8 +28,9 @@
             
 
             <input type="submit" value="Enviar" name= "Enviar">
+        
         </form>
 
 
-        <a href="../inicio.php"><button>logar</button></a>
+        <a href="../menu.php"><button>Voltar</button></a>
 </div>

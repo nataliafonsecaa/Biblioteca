@@ -5,6 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>cadastro usuário</title>
+    <style>
+   
+   body{
+    background-color: #5A8A82;
+    color:#FDFEF7;
+    font-family: "Open Sans", sans-serif;
+   }
+
+  </style>
     </head>
 <body>
     <div>
@@ -25,6 +34,7 @@
 
 
         <a href="../inicio.php"><button>logar</button></a>
+        <a href="../menu.php"><button>Voltar</button></a>
 </div>
     <?php
 
