@@ -75,12 +75,11 @@
                     mysqli_close($con);   
                     if($usu_tipo == 'funcionario'){
                         header('location:./menu.php');
-                    }else{
-                        
                     }
-                    
-                
-                    
+                    else{
+                        header('location:./pesquisa.php');
+                    }
+ 
                 } else {
 
                     echo "Senha incorreta";   
