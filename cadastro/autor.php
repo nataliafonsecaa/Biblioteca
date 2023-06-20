@@ -24,8 +24,6 @@
             <input type = "date" id = "nasc" name = "nasc"  maxlength = "20"><br>
             <label for = "obras">Obras do Autor: )</label>
             <input type = "text" id = "obras" name = "obras"  maxlength = "20"><br>
-      
-            
 
             <input type="submit" value="Enviar" name= "Enviar">
         
